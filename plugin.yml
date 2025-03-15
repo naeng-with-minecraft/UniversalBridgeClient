@@ -1,7 +1,7 @@
-name: VotifierAPI
-author: alvin0319
-main: alvin0319\VotifierAPI\Loader
+name: UniversalBridgeClient
+author: [alvin0319, naeng]
+main: naeng\universalbridge\UniversalBridge
 version: 1.0.0
-api: 4.0.0
-
-src-namespace-prefix: alvin0319\VotifierAPI
+api: 5.0.0
+softdepend:
+  - DiscordCore
