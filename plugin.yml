@@ -1,7 +1,7 @@
 name: UniversalBridgeClient
 author: [alvin0319, naeng]
 main: naeng\universalbridge\UniversalBridge
-version: 1.0.0
+version: 1.0.1
 api: 5.0.0
 softdepend:
   - DiscordCore
