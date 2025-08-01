@@ -93,10 +93,10 @@ class UniversalBridge extends PluginBase{
                     $clientPort = intval($temp[1]);
 
                     $subscriber = $this->subscribers[$type] ?? null;
-                    $response = $subscriber === null ? "" : $subscriber($id, $clientIp, $clientPort, $receivedData);
+                    $response = $subscriber === null ? "" : $subscriber($id, $clientIp, $clientPort, ($receivedData["params"] ?? []));
 
                     if($response instanceof \Generator){
-                        Await::f2c(function() use($response, $id, $clientIp, $clientPort, $receivedData){
+                        Await::f2c(function() use($response, $id){
                             try{
                                 $response = yield from $response;
                             }catch(\Exception $e){
